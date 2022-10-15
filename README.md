@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Trabalho para a disciplina de Gerencia de Projetos e Manutenção de Software (TCC00339)
 
 ## Setup
@@ -9,10 +8,8 @@ Trabalho para a disciplina de Gerencia de Projetos e Manutenção de Software (T
 git clone git@github.com:projeto-monopoly-uff/project.git
 [referência] (https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-# Baixando o Pygame
-1. Necessário primeiro ter o Python no computador. [Link para Tutorial](https://www.youtube.com/watch?v=ctcDfKYrzOQ)
-
-=======
-Trabalho para a disciplina de Gerencia de Projetos e Manutenção de Software
->>>>>>> c3b43264b6bd3b2660b30444174f6c8c90403c6f
+# Baixando o Django
+1. python -m pip install Django --user (pela linha de comando, em qualquer pasta) ref: https://docs.djangoproject.com/en/4.1/topics/install/#installing-an-official-release-with-pip
+2. O projeto e o aplicativo Django do jogo já estão criados na main basta dar pull nela ou na branch Joel.
+ 
 
