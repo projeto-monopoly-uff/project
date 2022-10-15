@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Trabalho para a disciplina de Gerencia de Projetos e Manutenção de Software (TCC00339)
 
 ## Setup
@@ -10,7 +11,8 @@ git clone git@github.com:projeto-monopoly-uff/project.git
 
 # Baixando o Pygame
 1. Necessário primeiro ter o Python no computador. [Link para Tutorial](https://www.youtube.com/watch?v=ctcDfKYrzOQ)
-2. No cmd ou linha de comando, digite: 
-pip install pygame 
-[referência](https://www.youtube.com/watch?v=BT2cjrxGpWo&list=PLJ8PYFcmwFOxtJS4EZTGEPxMEo4YdbxdQ&index=2)
+
+=======
+Trabalho para a disciplina de Gerencia de Projetos e Manutenção de Software
+>>>>>>> c3b43264b6bd3b2660b30444174f6c8c90403c6f
 
