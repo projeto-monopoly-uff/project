@@ -8,24 +8,24 @@ for (var i = 1; i < 12; i++) {
     for (var j = 1; j < 12; j++) {
         //Criando a primeira fileira
         if (i == 1) {
-            $(".grid-container").append(`<div class="grid-item limit-row" id="celula${celula}">${celula}</div>`);
+            $(".grid-container").append(`<div class="grid-item limit-row" id="celula${celula}"></div>`);
             celula++;
         }
         //Criando a última fileira
         else if (i == 11) {
-            $(".grid-container").append(`<div class="grid-item limit-row" id="celula${celula}">${celula}</div>`);
+            $(".grid-container").append(`<div class="grid-item limit-row" id="celula${celula}"></div>`);
             celula--;
         }
         else { //Criando demais fileiras
             //Célula do começo da fileira, antes do centro
             if (j == 1) {
                 celula = celula - diferenca;
-                $(".grid-container").append(`<div class="grid-item limit-col" id="celula${celula}">${celula}</div>`);
+                $(".grid-container").append(`<div class="grid-item limit-col" id="celula${celula}"></div>`);
                 diferenca++;
             //Célula do fim da fileira, depois do centro
             } else if (j == 11) {
                 celula = celula + diferenca;
-                $(".grid-container").append(`<div class="grid-item limit-col" id="celula${celula - 1}">${celula - 1}</div>`);
+                $(".grid-container").append(`<div class="grid-item limit-col" id="celula${celula - 1}"></div>`);
                 diferenca++;
                 if (celula == 41) celula = 11;
             //Centro
