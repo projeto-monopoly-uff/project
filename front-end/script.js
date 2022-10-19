@@ -30,7 +30,7 @@ for (var i = 1; i < 12; i++) {
                 if (celula == 41) celula = 11;
             //Centro
             } else if (i == 2 && j == 2) {
-                $(".grid-container").append(`<div class="grid-item center">"Center"</div>`);
+                $(".grid-container").append(`<div class="grid-item center" id="centro"></div>`);
             }
         }
     }
