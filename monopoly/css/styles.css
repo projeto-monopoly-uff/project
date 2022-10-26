@@ -6,6 +6,11 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+body {
+  background-color: grey;
+}
+
 .grid-container {
   display: inline-grid;
   grid-template-columns: 150px 100px 100px 100px 100px 100px 100px 100px 100px 100px 150px ;
@@ -16,13 +21,14 @@ html {
 .grid-item {
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 0px;
-  cursor: pointer;
   font-size: auto;
   text-align: center;
 }
+
+/*
 .grid-item:hover {
   border: 1px solid #fff;
-}
+}*/
 
 .center{
     grid-column: 2 / 11;
@@ -46,15 +52,29 @@ html {
   justify-content: space-between;
 }
 
-.celula-horizontal {
-  flex-direction: column;
-  
-}
 
-.celula-vertical {
+
+.celula-oeste {
+  cursor: pointer;
   flex-direction: row;
-
 }
+
+.celula-leste {
+  cursor: pointer;
+  flex-direction: row-reverse;
+}
+
+.celula-norte {
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.celula-sul {
+  cursor: pointer;
+  flex-direction: column-reverse;
+}
+
+
 
 .celula-vertical .celula-cor {
   height: 98px;
