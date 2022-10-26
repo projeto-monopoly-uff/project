@@ -19,7 +19,7 @@ function Celula(nome, precotexto, cor, preco, groupNumber, baserent, aluguel1, a
 
 var celula = [];
 
-celula[1] = new Celula("GO", "COLLECT $200 SALARY AS YOU PASS.", "#FFFFFF");
+celula[1] = new Celula("GO", "", "#FFFFFF");
 celula[2] = new Celula("Mediterranean Avenue", "$60", "#8B4513", 60, 3, 2, 10, 30, 90, 160, 250);
 celula[3] = new Celula("Community Chest", "", "#FFFFFF");
 celula[4] = new Celula("Baltic Avenue", "$60", "#8B4513", 60, 3, 4, 20, 60, 180, 320, 450);
@@ -82,13 +82,20 @@ for (var i = 1; i <= 40; i++) {
     celulaAtualAnchor = celulaAtual.appendChild(document.createElement("div"));
     celulaAtualAnchor.id = "celula" + i + "anchor";
     celulaAtualAnchor.className = "celula-anchor";
-
-    celulaAtualPositionHolder = celulaAtualAnchor.appendChild(document.createElement("div"));
-    celulaAtualPositionHolder.id = "celula" + i + "positionholder";
-    celulaAtualPositionHolder.className = "celula-position-holder";
-    //celulaAtualPositionHolder.enlargeId = "enlarge" + i;
+    /*
+    Deiferencia as células horizontais das verticais,
+    se for uma célula localizada na vertical(lados), aplica uma classe,
+    enquanto aplica outra classe nas celulas horizontais(topo e base).
+    */
+    if((i <= 20 && i >= 12) || (i <= 40 && i >= 32)) {
+        celulaAtualAnchor.classList.add("celula-vertical");
+    } else {
+        celulaAtualAnchor.classList.add("celula-horizontal");
+    }
 
     //HTML += "<div id='enlarge" + i + "color' class='enlarge-color'></div>";
+
+
 
     //Passando cor da celula
     celulaAtualcor = celulaAtualAnchor.appendChild(document.createElement("div"));
@@ -97,66 +104,85 @@ for (var i = 1; i <= 40; i++) {
     celulaAtualcor.innerHTML = "<div id='enlarge" + i + "color' class='enlarge-color'></div>";
     document.getElementById("enlarge" + i + "color").style.backgroundColor = quadrado.cor;
 
+    celulaAtualInfo = celulaAtualAnchor.appendChild(document.createElement("div"))
+    celulaAtualInfo.classList.add("celula-info");
+
     //Colocando ícones nos quadrados
     //Início
     if (i == 1) {
-        celulaAtualImagem = celulaAtualAnchor.appendChild(document.createElement("div"));
+        celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
+        celulaAtualImagem.className = "celula-img";
         celulaAtualImagem.innerHTML = "<img src='imagens/arrow_icon.png'/>";
     }
     //Just Visiting
     if (i == 11) {
-        celulaAtualImagem = celulaAtualAnchor.appendChild(document.createElement("div"));
+        celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
+        celulaAtualImagem.className = "celula-img";
         celulaAtualImagem.innerHTML = "<img src='imagens/jake_icon.png'/>";
     }
     //Community Chest
     else if (i == 3 || i == 18 || i == 34) {
-        celulaAtualImagem = celulaAtualAnchor.appendChild(document.createElement("div"));
+        celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
+        celulaAtualImagem.className = "celula-img";
         celulaAtualImagem.innerHTML = "<img src='imagens/community_chest_icon.png'/>";
     }
     //Trem do Reading Railroad
     else if (i == 6 || i == 16 || i == 26 || i == 36) {
-        celulaAtualImagem = celulaAtualAnchor.appendChild(document.createElement("div"));
+        celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
+        celulaAtualImagem.className = "celula-img";
         celulaAtualImagem.innerHTML = "<img src='imagens/train_icon.png'/>";
     }
     //Chance
     else if (i == 8 || i == 23 || i == 37) {
-        celulaAtualImagem = celulaAtualAnchor.appendChild(document.createElement("div"));
+        celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
+        celulaAtualImagem.className = "celula-img";
         celulaAtualImagem.innerHTML = "<img src='imagens/chance_icon.png'/>";
     }
     //Electric Company
     else if (i == 13) {
-        celulaAtualImagem = celulaAtualAnchor.appendChild(document.createElement("div"));
+        celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
+        celulaAtualImagem.className = "celula-img";
         celulaAtualImagem.innerHTML = "<img src='imagens/electric_icon.png'/>";
     }
     //Free Parking
     else if (i == 21) {
-        celulaAtualImagem = celulaAtualAnchor.appendChild(document.createElement("div"));
+        celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
+        celulaAtualImagem.className = "celula-img";
         celulaAtualImagem.innerHTML = "<img src='imagens/free_parking_icon.png'/>";
     }
     //Water Works
     else if (i == 29) {
-        celulaAtualImagem = celulaAtualAnchor.appendChild(document.createElement("div"));
+        celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
+        celulaAtualImagem.className = "celula-img";
         celulaAtualImagem.innerHTML = "<img src='imagens/water_icon.png'/>";
     }
     //Go to jail
     else if (i == 31) {
-        celulaAtualImagem = celulaAtualAnchor.appendChild(document.createElement("div"));
+        celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
+        celulaAtualImagem.className = "celula-img";
         celulaAtualImagem.innerHTML = "<img src='imagens/police_icon.png'/>";
     }
     //Luxury Tax
     else if (i == 39) {
-        celulaAtualImagem = celulaAtualAnchor.appendChild(document.createElement("div"));
+        celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
+        celulaAtualImagem.className = "celula-img";
         celulaAtualImagem.innerHTML = "<img src='imagens/tax_icon.png'/>";
     }
 
+    celulaAtualTexto = celulaAtualInfo.appendChild(document.createElement("div"));
+    celulaAtualTexto.className = "celula-texto";
+
     //Passando nome da celula
-    celulaAtualNome = celulaAtualAnchor.appendChild(document.createElement("div"));
+    celulaAtualNome = celulaAtualTexto.appendChild(document.createElement("div"));
     celulaAtualNome.id = "celula" + i + "nome";
     celulaAtualNome.className = "celula-nome";
     celulaAtualNome.textContent = quadrado.nome;
 
     //Passando preco da celula
-    celulaAtualPreco = celulaAtualAnchor.appendChild(document.createElement("div"));
+    let preco = document.createElement("div");
+    //Adiciona uma classe à div contendo o preço para permitir estilização
+    preco.classList.add("celula-descricao");
+    celulaAtualPreco = celulaAtualTexto.appendChild(preco);
     celulaAtualPreco.textContent = quadrado.precotexto;
 
     //Passando donos da celula
