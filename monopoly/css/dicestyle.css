@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/10/2022, 21:19:51
+    Author     : danie
+*/
+		.container {
+			width: 35%;
+			margin: auto;
+		}
+
+		.dice {
+			text-align: center;
+			display: inline-block;
+			margin: 5px;
+		}
+
+		.major_container {
+                        width: 35%;
+			margin: auto;
+			background-color: #C7F0C7;
+			margin: 0;
+                        border-radius: 3px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+		}
+
+		h1 {
+			margin: 3px;
+			font-family: "Lobster", cursive;
+			text-shadow: 2px 0 #232931;
+			font-size: 1.125rem;
+			color: #4ecca3;
+			text-align: center;
+		}
+
+		p {
+			font-size: 1rem;
+			color: #4ecca3;
+			font-family: "Indie Flower", cursive;
+		}
+
+		img {
+			width: 100%;
+		}
+                input{
+                    width:71px;
+                }
+
+		.bottom {
+			padding-top: 7px;
+		}
+
+		.butn {
+			background: #4ecca3;
+			font-family: "Indie Flower", cursive;
+			border-radius: 3px;
+			color: #ffff;
+			font-size: 12px;
+			padding: 4px 6px 4px 6px;
+			text-decoration: none;
+                        text-align: center;
+		}
+
+		.butn:hover {
+			background: #232931;
+			text-decoration: none;
+		}
+                .result {
+			background: #fffff;
+                        text-align: center;
+			font-family: "Indie Flower", cursive;
+			border-radius: 3px;
+			color: black;
+			font-size: 12px;
+			padding: 4px 6px 4px 6px;
+			text-decoration: none;
+		}
+
+		.result:hover {
+			background: #232931;
+			text-decoration: none;
+		}
+                
