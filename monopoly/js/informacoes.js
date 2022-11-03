@@ -2,7 +2,7 @@ function Celula(nome, precotexto, cor, preco, groupNumber, baserent, aluguel1, a
     this.nome = nome;
     this.precotexto = precotexto;
     this.cor = cor;
-    this.donos = 0;
+    this.dono = 0;
     this.hipoteca = false;
     this.casa = 0;
     this.hotel = 0;
