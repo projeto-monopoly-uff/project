@@ -1,3 +1,9 @@
+var Window;
+function windowopen() {
+Window = window.open(
+"chancecard.html",
+"chancecard", "width=300, height=350");
+}
 function Celula(nome, precotexto, cor, preco, groupNumber, baserent, aluguel1, aluguel2, aluguel3, aluguel4, aluguel5) {
     this.nome = nome;
     this.precotexto = precotexto;
@@ -149,7 +155,7 @@ for (var i = 1; i <= 40; i++) {
     else if (i == 8 || i == 23 || i == 37) {
         celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
         celulaAtualImagem.className = "celula-img";
-        celulaAtualImagem.innerHTML = "<img src='imagens/chance_icon.png'/>";
+        celulaAtualImagem.innerHTML = "<img src='imagens/chance_icon.png'onclick='windowopen()'/>";
     }
     //Electric Company
     else if (i == 13) {
