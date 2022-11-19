@@ -118,3 +118,8 @@ body {
   display: flex;
   
 }
+
+.token-jogador {
+  height: 50px;
+  width: 50px;
+}
