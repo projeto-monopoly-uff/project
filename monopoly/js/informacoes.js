@@ -70,7 +70,7 @@ var celulaAtualDono;
 var celulaAtualImagem;
 
 var centro = document.getElementById("centro").appendChild(document.createElement("div"));;
-centro.innerHTML = "<img src='imagens/monopoly_logo.png'/><br><br><br><object name='foo' type='text/html' data='diceview.html'width='850' height='500'></object>";
+centro.innerHTML = "<img src='imagens/monopoly_logo.png'/>";
 
 //For para atribuir a informações a cada quadrado do grid
 for (var i = 1; i <= 40; i++) {

@@ -1,0 +1,45 @@
+@font-face {
+    font-family: kabel;
+    src: url('../../fontes/KabelMedium.ttf');
+}
+
+body{
+    margin:0;
+    background-color: #cccccc;
+}
+
+.opcoes-jogador {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e60000;
+    width:100%;
+}
+
+.opcao-jogador {
+    display: inline;
+    margin: 0;
+}
+
+
+.texto-menu {
+    font-size: 20px;
+    font-family: kabel;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 14px 10px;
+}
+
+.texto-opcao-jogador:hover {
+    background-color: #cc0000;
+    cursor:pointer;
+}
+
+.nome-jogador{
+    float:right;
+    width: auto;
+    height: auto;
+}
+

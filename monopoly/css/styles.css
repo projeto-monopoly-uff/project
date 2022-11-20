@@ -119,7 +119,21 @@ body {
   
 }
 
-.token-jogador {
-  height: 50px;
-  width: 50px;
+
+#frame-menu-jogador {
+  border: none;
+  width: 400px;
+  height: 200px;
+  border: 1px solid #e60000;
+}
+
+#conteudo-centro {
+  display: flex;
+  margin: 0;
+  justify-content: space-around;
+}
+
+#dados {
+  height: 500px;
+  width: 500px;
 }
