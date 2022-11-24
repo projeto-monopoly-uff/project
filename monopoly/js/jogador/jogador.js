@@ -1,5 +1,6 @@
 import {Carteira} from "./carteira.js";
 import {FundosInsuficientesException} from "../exception/FundosInsuficientes.js";
+import {openandclosewindow} from "../chance/openandclosewindow";
 
 function FalindoException(valor){
     this.mensagem = `Você deve pagar a dívida de $${valor} ou declarar falência.`
@@ -16,6 +17,7 @@ function Jogador(id, nome, carteira, cor){
     this.preso = false;
     this.doubles = 0;
     this.credor = -1;
+    posicao.onchange = function(){if (posicao == 8 || posicao == 23 ||  posicao == 37) {openandclosewindow(posicao)};
 }
 
 Jogador.prototype.pagar = function(valor) {
@@ -64,4 +66,4 @@ Jogador.prototype.definirCredor = function(jogador){
     this.credor = jogador;
 }
 
-export {Jogador}
+export {Jogador};
