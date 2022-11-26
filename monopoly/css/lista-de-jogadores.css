@@ -1,3 +1,5 @@
-.lista-container {
+#lista-jogadores-container {
     display: grid;
+    grid-template-columns: auto auto auto auto;
+    
 }

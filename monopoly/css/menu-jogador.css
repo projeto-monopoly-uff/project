@@ -3,9 +3,22 @@
     src: url('../../fontes/KabelMedium.ttf');
 }
 
-body{
+#menu-jogador-container {
+    height: 400px;
+    width: 200px;
+}
+
+#conteudo-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-jogador{
     margin:0;
     background-color: #cccccc;
+    height: 200px;
+    width: 400px;
 }
 
 .opcoes-jogador {

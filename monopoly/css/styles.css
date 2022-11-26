@@ -129,11 +129,17 @@ body {
 
 #conteudo-centro {
   display: flex;
+  flex-direction: column;
   margin: 0;
-  justify-content: space-around;
+}
+#conteudo-centro {
+  display: flex;
+  margin: 0;
+  justify-content: center;
 }
 
 #dados {
-  height: 500px;
-  width: 500px;
+  height: 200px;
+  width: 200px;
 }
+

@@ -7,6 +7,7 @@
 
 		// Function to roll the dice
 		function rollTheDice() {
+			alert('hey!');
 			setTimeout(function () {
 				var randomNumber1 = Math.floor(Math.random() * 6) + 1;
 				var randomNumber2 = Math.floor(Math.random() * 6) + 1;
@@ -21,3 +22,5 @@
                                 document.getElementById("sum").value = sum;
 			}, 2500);
 		}
+
+export{rollTheDice}
