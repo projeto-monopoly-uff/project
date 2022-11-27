@@ -82,6 +82,16 @@ for (var i = 1; i <= 40; i++) {
     celulaAtualAnchor = celulaAtual.appendChild(document.createElement("div"));
     celulaAtualAnchor.id = "celula" + i + "anchor";
     celulaAtualAnchor.className = "celula-anchor";
+
+    const popupJogadores = document.createElement('div');
+
+    popupJogadores.classList.add('popup-container');
+    const popupContent = document.createElement('div');
+    popupContent.classList.add('popup-content');
+    popupContent.id = `jogadores-celula-${i}`;
+    popupJogadores.appendChild(popupContent);
+
+    celulaAtualAnchor.appendChild(popupJogadores);
     /*
     Deiferencia as células horizontais das verticais,
     se for uma célula localizada na vertical(lados), aplica uma classe,

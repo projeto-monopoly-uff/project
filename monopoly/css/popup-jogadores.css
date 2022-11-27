@@ -1,34 +1,72 @@
- 
-  /* The actual popup (appears on top) */
-  .popup {
-    visibility: visible;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  .popup::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
+/* Popup container - can be anything you want */
+.popup-container {
+  position: relative;
+  top: 0%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-  /* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-    visibility: visible;
-  }
+/* The actual popup */
+.popup-container .popup-content {
+  visibility: hidden;
+  width: 160px;
+  background-color: #cccccc;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 90%;
+  margin-left: 0px;
+  margin-right: 0px;
+  display:flex;
+  justify-content: center;
+}
+
+.celula-oeste .popup-content {
+  margin-left: 150px;
+}
+
+.celula-leste .popup-content {
+  margin-left: -150px;
+}
+
+.celula-norte .popup-content {
+  margin-bottom: -10px;
+}
+
+.celula-sul .popup-content {
+  margin-bottom: 140px;
+}
+
+/* Popup arrow */
+.popup-container .popup-content::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #cccccc transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup-container .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.marcador-jogador {
+  width: 15px;
+  height: 15px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
 

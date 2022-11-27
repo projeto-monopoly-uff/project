@@ -8,6 +8,10 @@ function menuJogador(){
     menu.appendChild(opcoes);
     const corpo = menuJogar();
     menu.appendChild(corpo);
+    const jogador = document.createElement('div');
+    jogador.style.visibility = 'hidden';
+    jogador.id = 'id-jogador-turno';
+    menu.appendChild(jogador);
     return menu;
 }
 
