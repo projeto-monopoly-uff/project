@@ -7,6 +7,10 @@ and open the template in the editor.
     Created on : 21/10/2022, 21:19:51
     Author     : danie
 */
+		body {
+			margin: 0;
+			box-sizing: border-box;
+		}
 		.container {
 			width: 35%;
 			margin: auto;
@@ -18,15 +22,18 @@ and open the template in the editor.
 			margin: 5px;
 		}
 
-		.major_container {
-                        width: 35%;
+
+		.dice-major-container {
+            width: 100%;
+			height: 100%;
 			margin: auto;
-			background-color: #C7F0C7;
 			margin: 0;
-                        border-radius: 3px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+            border-radius: 3px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+			overflow: hidden;
+			padding: 20px;
 		}
 
 		h1 {
@@ -44,12 +51,13 @@ and open the template in the editor.
 			font-family: "Indie Flower", cursive;
 		}
 
-		img {
-			width: 100%;
+		.dice-img {
+			width: 60px;
+			height: 60px;
 		}
-                input{
-                    width:71px;
-                }
+        input{
+                width:71px;
+            }
 
 		.bottom {
 			padding-top: 7px;
@@ -71,7 +79,7 @@ and open the template in the editor.
 			text-decoration: none;
 		}
                 .result {
-			background: #fffff;
+			background: #fff;
                         text-align: center;
 			font-family: "Indie Flower", cursive;
 			border-radius: 3px;

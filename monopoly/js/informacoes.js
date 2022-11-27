@@ -1,9 +1,3 @@
-var Window;
-function windowopen() {
-Window = window.open(
-"chancecard.html",
-"chancecard", "width=300, height=350");
-}
 function Celula(nome, precotexto, cor, preco, groupNumber, baserent, aluguel1, aluguel2, aluguel3, aluguel4, aluguel5) {
     this.nome = nome;
     this.precotexto = precotexto;
@@ -76,7 +70,7 @@ var celulaAtualDono;
 var celulaAtualImagem;
 
 var centro = document.getElementById("centro").appendChild(document.createElement("div"));;
-centro.innerHTML = "<img src='imagens/monopoly_logo.png'/><br><br><br><object name='foo' type='text/html' data='diceview.html'width='850' height='500'></object>";
+centro.innerHTML = "<img src='imagens/monopoly_logo.png'/>";
 
 //For para atribuir a informações a cada quadrado do grid
 for (var i = 1; i <= 40; i++) {
@@ -88,6 +82,16 @@ for (var i = 1; i <= 40; i++) {
     celulaAtualAnchor = celulaAtual.appendChild(document.createElement("div"));
     celulaAtualAnchor.id = "celula" + i + "anchor";
     celulaAtualAnchor.className = "celula-anchor";
+
+    const popupJogadores = document.createElement('div');
+
+    popupJogadores.classList.add('popup-container');
+    const popupContent = document.createElement('div');
+    popupContent.classList.add('popup-content');
+    popupContent.id = `jogadores-celula-${i}`;
+    popupJogadores.appendChild(popupContent);
+
+    celulaAtualAnchor.appendChild(popupJogadores);
     /*
     Deiferencia as células horizontais das verticais,
     se for uma célula localizada na vertical(lados), aplica uma classe,
@@ -155,7 +159,7 @@ for (var i = 1; i <= 40; i++) {
     else if (i == 8 || i == 23 || i == 37) {
         celulaAtualImagem = celulaAtualInfo.appendChild(document.createElement("div"));
         celulaAtualImagem.className = "celula-img";
-        celulaAtualImagem.innerHTML = "<img src='imagens/chance_icon.png'onclick='windowopen()'/>";
+        celulaAtualImagem.innerHTML = "<img src='imagens/chance_icon.png'/>";
     }
     //Electric Company
     else if (i == 13) {

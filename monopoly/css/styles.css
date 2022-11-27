@@ -118,3 +118,28 @@ body {
   display: flex;
   
 }
+
+
+#frame-menu-jogador {
+  border: none;
+  width: 400px;
+  height: 200px;
+  border: 1px solid #e60000;
+}
+
+#conteudo-centro {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+#conteudo-centro {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+}
+
+#dados {
+  height: 200px;
+  width: 200px;
+}
+
