@@ -3,6 +3,7 @@ import {menuJogador} from './jogador/menuJogador.js'
 import {Jogador} from './jogador/jogador.js'
 import { Carteira } from './jogador/carteira.js';
 import {moverToken} from './marcador/popup-jogadores.js'
+import {baralhochance, sortearBaralho} from './dados/dados.js'
 
 /*
 $('#centro').append('<div id=conteudo-centro> </div>');
@@ -70,8 +71,11 @@ const botaoRolarDados = document.getElementById('botao-rolar-dados');
 botaoRolarDados.onclick = function () {
     dispararMovimento();
 }
+botaoEscolherCartas.onclick = function () {
+    sortearBaralho();
+}
 console.log(botaoRolarDados.onclick);
-
+console.log(botaoEscolherCartas.onclick);
 
 
 
