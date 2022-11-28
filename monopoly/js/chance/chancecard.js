@@ -5,6 +5,9 @@
  */
 import { Jogador } from "../jogador/jogador.js";
 import { listaDeJogadores } from "../jogador/lista-de-jogadores.js";
+import { rolarDados } from "../dados/dados.js";
+import { Carteira } from "../jogador/carteira.js";
+//import { Propriedade } from "../propriedade/propriedade.js";
 
 function baralhochance(){
     //const conteudo = document.createElement('div');
@@ -114,7 +117,7 @@ if (number === 6 || number === 16){
        if(Celula[16].donos===8){
         for(x=0; x>jogadores.size(); x++){
          for(y=0; y>jogadores[x].carteira.propriedades.size(); y++){
-       // if (jogadores[x].propriedade[y].nome === Celula[16].nome){
+       // if (jogadores[x].carteira.propriedades.[y].nome === Celula[16].nome){
         // Not posible to pay de owner yet.
        // }
          }
@@ -128,7 +131,7 @@ if (number === 6 || number === 16){
       if(Celula[26].donos===8){
         for(x=0; x>jogadores.size(); x++){
          for(y=0; y>jogadores[x].carteira.propriedades.size(); y++){
-       // if (jogadores[x].propriedade[y].nome === Celula[26].nome){
+       // if (jogadores[x].carteira.propriedades.[y].nome === Celula[26].nome){
         // Not posible to pay de owner yet.
        // }
          }
@@ -140,7 +143,7 @@ if (number === 6 || number === 16){
      if(Celula[6].donos===8){
         for(x=0; x>jogadores.size(); x++){
          for(y=0; y>jogadores[x].carteira.propriedades.size(); y++){
-       // if (jogadores[x].propriedade[y].nome === Celula[6].nome){
+       // if (jogadores[x].carteira.propriedades.[y].nome === Celula[6].nome){
         // Not posible to pay de owner yet.
        // }
          }
