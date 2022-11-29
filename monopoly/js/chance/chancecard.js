@@ -8,6 +8,7 @@ import { listaDeJogadores } from "../jogador/lista-de-jogadores.js";
 import { rolarDados } from "../dados/dados.js";
 import { Carteira } from "../jogador/carteira.js";
 //import { Propriedade } from "../propriedade/propriedade.js";
+import { dispararchanceMovimento } from "../compositor.js";
 
 function baralhochance(){
     //const conteudo = document.createElement('div');
@@ -78,13 +79,13 @@ if (number === 3){
 //Chance=23=>17 casas
 //Chance=37=>37 casas
     if(posicao===8){
-        Jogador.mover(17);
+        dispararchanceMovimento(17);
     }
     if (posicao===23){
-      Jogador.mover(2);
+      dispararchanceMovimento(2);
     }
     if (posicao===37){
-    Jogador.mover(28);
+    dispararchanceMovimento(28);
     }
 }
 if (number === 4){
@@ -93,13 +94,13 @@ if (number === 4){
 //Chance=23=>3 casas 
 //Chance=37=>9 casas 
     if(posicao===8){
-        Jogador.mover(8);
+        dispararchanceMovimento(8);
     }
     if (posicao===23){
-      Jogador.mover(29);
+      dispararchanceMovimento(29);
     }
     if (posicao===37){
-    Jogador.mover(15);
+    dispararchanceMovimento(15);
     }
  //Conta como uma segunda jogada seguida então as regras the propriedade se aplicam.
 Jogador.receber(200);
@@ -113,7 +114,7 @@ if (number === 6 || number === 16){
 //Chance=23=>3 casas B & O
 //Chance=37=>9 casas Reading
     if(posicao===8){
-        Jogador.mover(8);
+        dispararchanceMovimento(8);
        if(Celula[16].donos===8){
         for(x=0; x>jogadores.size(); x++){
          for(y=0; y>jogadores[x].carteira.propriedades.size(); y++){
@@ -127,7 +128,7 @@ if (number === 6 || number === 16){
        }
     }
     if (posicao===23){
-      Jogador.mover(3);
+      dispararchanceMovimento(3);
       if(Celula[26].donos===8){
         for(x=0; x>jogadores.size(); x++){
          for(y=0; y>jogadores[x].carteira.propriedades.size(); y++){
@@ -150,7 +151,7 @@ if (number === 6 || number === 16){
          }
         Jogador.pagar(Celula[6].baserent)
        }
-    Jogador.mover(9);
+    dispararchanceMovimento(9);
     }
  //Conta como uma segunda jogada seguida então as regras the companhia se aplicam.
 }
@@ -160,7 +161,7 @@ if (number === 7){
 //Chance=23=>6 casas Water
 //Chance=37=>16 casas Eletric
     if(posicao===8){
-        Jogador.mover(5);
+        dispararchanceMovimento(5);
           if(Celula[13].donos===8){
         for(x=0; x>jogadores.size(); x++){
          for(y=0; y>jogadores[x].carteira.propriedades.size(); y++){
@@ -174,7 +175,7 @@ if (number === 7){
        }
     }
     if (posicao===23){
-      Jogador.mover(6);
+      dispararchanceMovimento(6);
       if(Celula[29].donos===8){
         for(x=0; x>jogadores.size(); x++){
          for(y=0; y>jogadores[x].carteira.propriedades.size(); y++){
@@ -199,11 +200,11 @@ if (number === 7){
        //Ele ja vai pagar o aluguel ao cair na casa então aqui ele so esta pagando de novo para ficar o dobro.
         Jogador.pagar(rolarDados()*10)
        }
-    Jogador.mover(9);
+    dispararchanceMovimento(9);
     }
 }
 if (number === 8){
-Jogador.mover(-3);
+dispararchanceMovimento(-3);
 }
 if (number === 9){
 Jogador.receber(50);

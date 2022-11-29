@@ -3,7 +3,7 @@ import {menuJogador} from './jogador/menuJogador.js'
 import {Jogador} from './jogador/jogador.js'
 import { Carteira } from './jogador/carteira.js';
 import {moverToken} from './marcador/popup-jogadores.js'
-import {baralhochance, sortearBaralho} from './dados/dados.js'
+import {baralhochance, sortearBaralho} from './chance/chancecard.js'
 
 /*
 $('#centro').append('<div id=conteudo-centro> </div>');
@@ -44,6 +44,17 @@ function dispararMovimento(){
     //console.log(jogador.posicao);
     moverToken(jogador);
 }
+function dispararchanceMovimento(casas){
+    const jogadorId = document.getElementById('id-jogador-turno').textContent;
+    //console.log(jogadorId);
+    const jogador = jogadores.find(i => i.id == jogadorId);
+    //console.log(jogador);
+    //console.log(resultadoDados);
+    jogador.mover(casas);
+    //console.log(jogador);
+    //console.log(jogador.posicao);
+    moverToken(jogador);
+}
 
 
 const centro = document.querySelector('#centro');
@@ -71,11 +82,13 @@ const botaoRolarDados = document.getElementById('botao-rolar-dados');
 botaoRolarDados.onclick = function () {
     dispararMovimento();
 }
+console.log(botaoRolarDados.onclick);
+
 botaoEscolherCartas.onclick = function () {
     sortearBaralho();
 }
-console.log(botaoRolarDados.onclick);
 console.log(botaoEscolherCartas.onclick);
+
 
 
 

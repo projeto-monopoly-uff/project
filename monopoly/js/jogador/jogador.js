@@ -16,7 +16,6 @@ function Jogador(id, nome, carteira, cor){
     this.preso = false;
     this.doubles = 0;
     this.credor = -1;
-    posicao.onchange = function(){if (posicao == 8 || posicao == 23 ||  posicao == 37) {sortearBaralho()};
 }
 
 Jogador.prototype.pagar = function(valor) {
