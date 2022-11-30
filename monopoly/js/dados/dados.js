@@ -28,7 +28,7 @@ function dados(){
     container1.classList.add('dice-container');
 
     const container1Title = document.createElement('h1');
-    container1Title.innerText = "Vamos jogar!";
+    container1Title.innerText = "Let's play";
     container1.appendChild(container1Title);
 
     const firstDice = document.createElement('div');
