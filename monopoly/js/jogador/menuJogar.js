@@ -1,5 +1,7 @@
+
 import {dados} from '../dados/dados.js'
 import {baralhochance} from './chance/chancecard.js' 
+
 
 function menuJogar(){
     const corpo = document.createElement('div');;
@@ -13,6 +15,7 @@ function menuJogar(){
     rollButton.id = 'botao-rolar-dados';
     rollButton.innerText = 'Rolar os dados';
     corpo.appendChild(rollButton);
+
    
     const rollButtontwo = document.createElement('button');
     rollButtontwo.type = 'button';
@@ -27,6 +30,7 @@ function menuJogar(){
     rollButtonthree.id = 'botao-sortear-cartas';
     rollButtonthree.innerText = 'Sortear as cartas community chest';
     corpo.appendChild(rollButtonthree);
+
 
     const propriedade = document.createElement('div');
     propriedade.classList.add('propriedade-atual');

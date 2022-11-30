@@ -3,7 +3,9 @@ import {menuJogador} from './jogador/menuJogador.js'
 import {Jogador} from './jogador/jogador.js'
 import { Carteira } from './jogador/carteira.js';
 import {moverToken} from './marcador/popup-jogadores.js'
+
 import {baralhochance, sortearBaralho} from './chance/chancecard.js'
+
 
 /*
 $('#centro').append('<div id=conteudo-centro> </div>');
@@ -42,6 +44,7 @@ function dispararMovimento(){
     jogador.mover(resultadoDados);
     //console.log(jogador);
     //console.log(jogador.posicao);
+
     if(resultadodosDados===8 ||resultadodosDados===23 || resultadodosDados===37){
     stateHandlechance();
     }
@@ -59,6 +62,7 @@ function dispararchanceMovimento(casas){
     jogador.mover(casas);
     //console.log(jogador);
     //console.log(jogador.posicao);
+
     moverToken(jogador);
 }
 
@@ -115,6 +119,7 @@ function disablechance() {
 function disablecommunitychest() {
     botaoSortearCartas.disabled = true;
 }
+
 
 
 
