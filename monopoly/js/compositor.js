@@ -42,6 +42,12 @@ function dispararMovimento(){
     jogador.mover(resultadoDados);
     //console.log(jogador);
     //console.log(jogador.posicao);
+    if(resultadodosDados===8 ||resultadodosDados===23 || resultadodosDados===37){
+    stateHandlechance();
+    }
+ if(resultadodosDados===3 ||resultadodosDados===18 || resultadodosDados===34){
+    stateHandlecommunitychest();
+    }
     moverToken(jogador);
 }
 function dispararchanceMovimento(casas){
@@ -85,10 +91,30 @@ botaoRolarDados.onclick = function () {
 console.log(botaoRolarDados.onclick);
 
 botaoEscolherCartas.onclick = function () {
-    sortearBaralho();
+    sortearBaralho(Jogador);
 }
 console.log(botaoEscolherCartas.onclick);
 
+botaoSortearCartas.onclick = function () {
+    sortearCartas(Jogador);
+}
+console.log(botaoSortearCartas.onclick);
+
+botaoEscolherCartas.disabled = true;
+function stateHandlechance() {
+    botaoEscolherCartas.disabled = false;
+}
+
+botaoSortearCartas.disabled = true;
+function stateHandlecommunitychest() {
+    botaoSortearCartas.disabled = false;
+}
+function disablechance() {
+    botaoEscolherCartas.disabled = true;
+}
+function disablecommunitychest() {
+    botaoSortearCartas.disabled = true;
+}
 
 
 

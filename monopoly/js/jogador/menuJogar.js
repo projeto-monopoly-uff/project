@@ -20,6 +20,13 @@ function menuJogar(){
     rollButtontwo.id = 'botao-sortear-cartas';
     rollButtontwo.innerText = 'Sortear as cartas chance';
     corpo.appendChild(rollButtontwo);
+    
+    const rollButtonthree = document.createElement('button');
+    rollButtonthree.type = 'button';
+    rollButtonthree.classList.add('butn');
+    rollButtonthree.id = 'botao-sortear-cartas';
+    rollButtonthree.innerText = 'Sortear as cartas community chest';
+    corpo.appendChild(rollButtonthree);
 
     const propriedade = document.createElement('div');
     propriedade.classList.add('propriedade-atual');
