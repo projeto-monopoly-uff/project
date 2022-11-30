@@ -4,6 +4,9 @@ import {Jogador} from './jogador/jogador.js'
 import { Carteira } from './jogador/carteira.js';
 import {moverToken} from './marcador/popup-jogadores.js'
 
+import {baralhochance, sortearBaralho} from './chance/chancecard.js'
+
+
 /*
 $('#centro').append('<div id=conteudo-centro> </div>');
 $('#conteudo-centro').append('<div id="conteudo-centro-cima"> </div>')
@@ -41,6 +44,25 @@ function dispararMovimento(){
     jogador.mover(resultadoDados);
     //console.log(jogador);
     //console.log(jogador.posicao);
+
+    if(resultadodosDados===8 ||resultadodosDados===23 || resultadodosDados===37){
+    stateHandlechance();
+    }
+ if(resultadodosDados===3 ||resultadodosDados===18 || resultadodosDados===34){
+    stateHandlecommunitychest();
+    }
+    moverToken(jogador);
+}
+function dispararchanceMovimento(casas){
+    const jogadorId = document.getElementById('id-jogador-turno').textContent;
+    //console.log(jogadorId);
+    const jogador = jogadores.find(i => i.id == jogadorId);
+    //console.log(jogador);
+    //console.log(resultadoDados);
+    jogador.mover(casas);
+    //console.log(jogador);
+    //console.log(jogador.posicao);
+
     moverToken(jogador);
 }
 
@@ -71,6 +93,32 @@ botaoRolarDados.onclick = function () {
     dispararMovimento();
 }
 console.log(botaoRolarDados.onclick);
+
+botaoEscolherCartas.onclick = function () {
+    sortearBaralho(Jogador);
+}
+console.log(botaoEscolherCartas.onclick);
+
+botaoSortearCartas.onclick = function () {
+    sortearCartas(Jogador);
+}
+console.log(botaoSortearCartas.onclick);
+
+botaoEscolherCartas.disabled = true;
+function stateHandlechance() {
+    botaoEscolherCartas.disabled = false;
+}
+
+botaoSortearCartas.disabled = true;
+function stateHandlecommunitychest() {
+    botaoSortearCartas.disabled = false;
+}
+function disablechance() {
+    botaoEscolherCartas.disabled = true;
+}
+function disablecommunitychest() {
+    botaoSortearCartas.disabled = true;
+}
 
 
 
