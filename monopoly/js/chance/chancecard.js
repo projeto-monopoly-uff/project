@@ -223,7 +223,7 @@ Jogador.pagar(Jogador.carteira.casas.size()*25);
 Jogador.pagar(Jogador.carteira.hoteis.size()*100);
 }
 if (number === 13){
-var jogadores[];
+var jogadores;
 listaDeJogadores(jogadores = []);
 for(x=0; x>jogadores.size(); x++){
    if (jogadores[x] != Jogador){

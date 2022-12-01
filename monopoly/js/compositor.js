@@ -52,10 +52,10 @@ function dispararMovimento(){
     //console.log(jogador);
     //console.log(jogador.posicao);
 
-    if(resultadodosDados===8 ||resultadodosDados===23 || resultadodosDados===37){
+    if(resultadoDados===8 ||resultadoDados===23 || resultadoDados===37){
     stateHandlechance();
     }
- if(resultadodosDados===3 ||resultadodosDados===18 || resultadodosDados===34){
+    if(resultadoDados===3 ||resultadoDados===18 || resultadoDados===34){
     stateHandlecommunitychest();
     }
     moverToken(jogador);
@@ -94,6 +94,8 @@ const body = document.querySelector('body');
 
 const jogadores = [jogador];
 
+const botaoEscolherCartas = document.createElement('button');
+
 const botaoRolarDados = document.getElementById('botao-rolar-dados');
 
 const botaoComprar = document.getElementById('botao-comprar');
@@ -104,15 +106,19 @@ botaoRolarDados.onclick = function () {
 }
 console.log(botaoRolarDados.onclick);
 
+
 botaoComprar.onclick = function () {
     compraPropriedade();
 }
 console.log(botaoRolarDados.onclick);
 
+
 botaoEscolherCartas.onclick = function () {
     sortearBaralho(Jogador);
 }
 console.log(botaoEscolherCartas.onclick);
+
+const botaoSortearCartas = document.createElement('button');
 
 botaoSortearCartas.onclick = function () {
     sortearCartas(Jogador);
@@ -135,7 +141,7 @@ function disablecommunitychest() {
     botaoSortearCartas.disabled = true;
 }
 
-
+export {disablechance, disablecommunitychest, dispararMovimento, dispararchanceMovimento};
 
 
 
