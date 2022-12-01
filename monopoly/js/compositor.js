@@ -3,6 +3,7 @@ import {menuJogador} from './jogador/menuJogador.js'
 import {Jogador} from './jogador/jogador.js'
 import { Carteira } from './jogador/carteira.js';
 import {moverToken} from './marcador/popup-jogadores.js'
+import { propriedades } from './propriedades.js';
 
 import {baralhochance, sortearBaralho} from './chance/chancecard.js'
 
@@ -32,6 +33,12 @@ function iniciarJogo(jogadores) {
     const div = document.createElement('div');
     div.classList.add('marcador-jogador-1');
     popup.appendChild(div);
+}
+
+function compraPropriedade(){
+    
+    propriedades.compraProp();
+
 }
 
 function dispararMovimento(){
@@ -80,6 +87,7 @@ const jogador2 = new Jogador(2, 'João', new Carteira(), '#E74C3C');
 jogador2.moverAbsoluto(1);
 moverToken(jogador2);
 
+
 const idJogador = document.getElementById('id-jogador-turno');
 idJogador.innerText = jogador.id;
 
@@ -88,7 +96,11 @@ const body = document.querySelector('body');
 
 const jogadores = [jogador];
 
+const botaoEscolherCartas = document.createElement('button');
+
 const botaoRolarDados = document.getElementById('botao-rolar-dados');
+
+const botaoComprar = document.getElementById('botao-comprar');
 
 //botaoRolarDados.addEventListener('click', dispararMovimento(jogador));
 botaoRolarDados.onclick = function () {
@@ -96,7 +108,12 @@ botaoRolarDados.onclick = function () {
 }
 console.log(botaoRolarDados.onclick);
 
-const botaoEscolherCartas = document.createElement('button');
+
+botaoComprar.onclick = function () {
+    compraPropriedade();
+}
+console.log(botaoRolarDados.onclick);
+
 
 botaoEscolherCartas.onclick = function () {
     sortearBaralho(Jogador);
