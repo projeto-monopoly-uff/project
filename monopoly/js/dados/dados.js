@@ -5,6 +5,7 @@ function rolarDados() {
     var randomNumber2 = Math.floor(Math.random() * 6) + 1;
     const soma = randomNumber1 + randomNumber2;
     mudarImagens(randomNumber1, randomNumber2, soma);
+    Jogador.contadorPosicao(soma);
     return soma;
 }
 
