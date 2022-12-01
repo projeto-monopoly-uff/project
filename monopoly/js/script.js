@@ -2,6 +2,7 @@
 Iteração pra criar um tabuleiro, semelhante a uma matriz, mas o centro tem apenas UM  elemento que
 no CSS é configurado pra ocupar todo o centro da tabela, no caso o centro grandão do tabuleiro.  
 */
+
 var celula = 21; //Variável para armazenar o id da célula
 var diferenca = 12; //Variável para armazenar a diferença entre as celulas antes e depois do centro na mesma fileira
 for (var i = 1; i < 12; i++) {
