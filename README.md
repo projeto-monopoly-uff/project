@@ -17,6 +17,7 @@ git clone git@github.com:projeto-monopoly-uff/project.git
     - vscode-icons
 3. Para executar o projeto, basta abrir o arquivo index.html em um navegador de sua preferência.
     - Toda a estrutura necessária para rodar o código está disponível em seu navegador web.
+4. O projeto também pode ser executado no seguinte link do deploy: https://incandescent-cobbler-ccf6f5.netlify.app/
 
 ## Tecnologias utilizadas
 
