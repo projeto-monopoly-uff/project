@@ -16,6 +16,14 @@ function Jogador(id, nome, carteira, cor){
     this.preso = false;
     this.doubles = 0;
     this.credor = -1;
+    this.contaPosicao = 0;
+}
+
+Jogador.prototype.contadorPosicao = function(valorDados){
+    this.contaPosicao += valorDados;
+    if(this.contaPosicao >= 40){
+        this.contaPosicao -= 40;
+    }
 }
 
 Jogador.prototype.pagar = function(valor) {

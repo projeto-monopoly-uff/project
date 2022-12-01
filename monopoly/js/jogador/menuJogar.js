@@ -1,6 +1,7 @@
 
 import {dados} from '../dados/dados.js'
 import {baralhochance} from './chance/chancecard.js' 
+import {Jogador} from './jogador.js'
 
 
 function menuJogar(){
@@ -31,6 +32,16 @@ function menuJogar(){
     rollButtonthree.innerText = 'Sortear as cartas community chest';
     corpo.appendChild(rollButtonthree);
 
+    var NotProp = [1,3,5,8,11,18,21,23,31,34,37,39];
+
+    if (NotProp.includes(Jogador.contaPosicao) == false){
+    const rollButtonfour = document.createElement('button');
+    rollButtonfour.type = 'button';
+    rollButtonfour.classList.add('butn');
+    rollButtonfour.id = 'botao-comprar';
+    rollButtonfour.innerText = 'Comprar propriedade';
+    corpo.appendChild(rollButtonfour);
+    }
 
     const propriedade = document.createElement('div');
     propriedade.classList.add('propriedade-atual');
