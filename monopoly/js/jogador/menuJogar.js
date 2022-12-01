@@ -1,6 +1,6 @@
 
 import {dados} from '../dados/dados.js'
-import {baralhochance} from './chance/chancecard.js' 
+import {baralhochance} from '../chance/chancecard.js' 
 import {Jogador} from './jogador.js'
 
 
