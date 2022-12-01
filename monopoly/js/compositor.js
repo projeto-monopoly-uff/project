@@ -76,7 +76,9 @@ centro.appendChild(conteudoCentro);
 const jogador = new Jogador(1, 'José', new Carteira(), '#FFF');
 jogador.moverAbsoluto(1);
 moverToken(jogador);
-
+const jogador2 = new Jogador(2, 'João', new Carteira(), '#E74C3C');
+jogador2.moverAbsoluto(1);
+moverToken(jogador2);
 
 const idJogador = document.getElementById('id-jogador-turno');
 idJogador.innerText = jogador.id;
