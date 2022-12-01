@@ -3,7 +3,7 @@ import {menuJogador} from './jogador/menuJogador.js'
 import {Jogador} from './jogador/jogador.js'
 import { Carteira } from './jogador/carteira.js';
 import {moverToken} from './marcador/popup-jogadores.js'
-import { propriedades } from './propriedades.js';
+import { Propriedade } from './propriedades.js';
 
 import {baralhochance, sortearBaralho} from './chance/chancecard.js'
 
@@ -37,7 +37,7 @@ function iniciarJogo(jogadores) {
 
 function compraPropriedade(){
     
-    propriedades.compraProp();
+    Propriedade.compraProp();
 
 }
 

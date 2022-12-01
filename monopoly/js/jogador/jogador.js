@@ -24,6 +24,7 @@ Jogador.prototype.contadorPosicao = function(valorDados){
     if(this.contaPosicao >= 40){
         this.contaPosicao -= 40;
     }
+    console.log(this.contaPosicao);
 }
 
 Jogador.prototype.pagar = function(valor) {
