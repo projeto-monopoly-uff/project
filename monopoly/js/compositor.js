@@ -45,10 +45,10 @@ function dispararMovimento(){
     //console.log(jogador);
     //console.log(jogador.posicao);
 
-    if(resultadodosDados===8 ||resultadodosDados===23 || resultadodosDados===37){
+    if(resultadoDados===8 ||resultadoDados===23 || resultadoDados===37){
     stateHandlechance();
     }
- if(resultadodosDados===3 ||resultadodosDados===18 || resultadodosDados===34){
+    if(resultadoDados===3 ||resultadoDados===18 || resultadoDados===34){
     stateHandlecommunitychest();
     }
     moverToken(jogador);
