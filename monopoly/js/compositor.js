@@ -94,10 +94,14 @@ botaoRolarDados.onclick = function () {
 }
 console.log(botaoRolarDados.onclick);
 
+const botaoEscolherCartas = document.createElement('button');
+
 botaoEscolherCartas.onclick = function () {
     sortearBaralho(Jogador);
 }
 console.log(botaoEscolherCartas.onclick);
+
+const botaoSortearCartas = document.createElement('button');
 
 botaoSortearCartas.onclick = function () {
     sortearCartas(Jogador);
@@ -120,7 +124,7 @@ function disablecommunitychest() {
     botaoSortearCartas.disabled = true;
 }
 
-
+export {disablechance, disablecommunitychest, dispararMovimento, dispararchanceMovimento};
 
 
 
